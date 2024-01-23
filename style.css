@@ -6,6 +6,7 @@ body {
   background-size: cover;
   */
   background: var(--bg-url) no-repeat top center/ cover;
+height: 100vh;
 }
 
 :root {
@@ -87,7 +88,7 @@ a {
   top: 50%;
 }
 
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
@@ -99,7 +100,6 @@ a {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 9999px;
-
 }
 
 /*links lista*/
@@ -162,4 +162,14 @@ footer {
   text-align: center;
   color: var(--text-color);
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.png);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
 }
