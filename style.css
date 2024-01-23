@@ -86,11 +86,12 @@ a {
   left: 0;
   transform: translateY(-50%);
   top: 50%;
+
+  animation: slide-back 0.4s forwards;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-ing 0.4s forwards;
 }
 
 #switch span {
@@ -171,5 +172,24 @@ footer {
   }
   .light {
     --bg-url: url(./assets/bg-desktop.jpg);
+  }
+}
+
+/* Animation */
+@keyframes slide-ing {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
